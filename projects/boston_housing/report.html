@@ -13756,8 +13756,8 @@ KaWUUkoppZRSSimllFJKKaWUUkoZ/w/0DotdhAG58wAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ul>
-<li>At maximum depth = 1, the model has high bias - it cannot get a good fit on the data.</li>
-<li>At maximum depth = 10, the model has high variance - it fits the training data well but no longer performs as well against the validation data.</li>
+<li>At maximum depth = 1, the model has high bias - it cannot get a good fit on the data. This is indicated by the low training score, rising slope of the graph curve and the closeness of the training and validation scores at this point.</li>
+<li>At maximum depth = 10, the model has high variance - it fits the training data well but no longer performs as well against the validation data. This is indicated by the high training score, and the divergence of the training and validation scores in the graph.</li>
 </ul>
 
 </div>
@@ -14153,7 +14153,8 @@ Range in prices: $29,438.89
 <ul>
 <li>The environment =&gt; Demographics, living arrangements, housing expectations, zoning etc will have changed since that time rendering much of data incorrect, or changing the correlation of that data to price.</li>
 <li>Inflation plays a role in attempting to compare values from the past to present but does not directly influence the house prices as those are mostly controlled by supply/demand factors.</li>
-<li>The features used would play a role, but there are many other important factors for example the plot area; interest rates, distance from the the central business district and or transport, shops ; number of bathrooms, construction etc.</li>
+<li>The features used would play a role, but there are many other important factors for example the plot area; interest rates, distance from the central business district and or transport, shops ; number of bathrooms, construction etc.</li>
+<li>The range of prices in the sensitivty test is not too bad but probably too large to be really useful in recommending a house selling price. I feel this would need to be within about \$10000 or so for a \$400,000 home.</li>
 </ul>
 
 </div>
