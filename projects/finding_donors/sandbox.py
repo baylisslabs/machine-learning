@@ -68,7 +68,17 @@ features_log_minmax_transform[numerical] = scaler.fit_transform(features_log_tra
 
 ############################################################
 
-categorical  = ['workclass','education_level','marital-status','occupation','relationship','race','sex','native-country']
+categorical = [
+    'workclass',
+    'education_level',
+    'marital-status',
+    'occupation',
+    'relationship',
+    'race',
+    'sex',
+    'native-country'
+]
+
 features_final = pd.get_dummies(data = features_log_minmax_transform, columns = categorical)
 
 income = income_raw.apply(lambda x: int(x==">50K"))
