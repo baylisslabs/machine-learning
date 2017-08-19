@@ -188,13 +188,13 @@ from sklearn.metrics import make_scorer
 clf = LinearSVC(random_state=random_seed)
 
 parameters = {
-    'C': [1,10,100],
-    'max_iter': [100,1000],
+    'C': [1e-2,1,100,1e5],
+    'tol': [1e-4,1e-2,1],
     'class_weight': [None, 'balanced']
 }
 
 scorer = make_scorer(fbeta_score, beta = beta)
-grid_obj = GridSearchCV(clf,parameters,scorer)
+grid_obj = GridSearchCV(clf,parameters,scorer,verbose = 2, n_jobs = 2)
 
 grid_fit = grid_obj.fit(X_train, y_train)
 
