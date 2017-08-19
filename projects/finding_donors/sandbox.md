@@ -13,7 +13,7 @@ Structure your answer in the same format as above^, with 4 parts for each of the
 
 Answer:
 
-### Support Vector Machines (LinearSVC) ++
+### Support Vector Machines (LinearSVC)
 
 Example Application: Computational Biology.
 Strengths: Effective in high-dimensional spaces, memory efficient, and fast(Linear SVC).
@@ -55,8 +55,9 @@ HINT: Look at the graph at the bottom left from the cell above(the visualization
 
 Answer: LinearSVC
 
-    Out of the three models used - I would recommend using LinearSVC based on these tests. The F-score of 0.685 and accuracy 0.843 on the unoptimised model is clearly the best of the three options. In addition although training time was the the slowest of the three, prediction time was fast, as was K-NN.
-    Looking at the accuracy scores between training/testing sets both K-NN and decision tree show signs of overfitting as their training scores are higher than testing scores whereas in this case SVM improves on testing scores as the training set size increases.
+    Out of the three models used I would recommend using LinearSVC based on these tests. The F-score of 0.685 and accuracy of 0.843 on the unoptimised model is clearly the best of the three options. In addition although training time was the the slowest of the three, prediction time was fast, as was K-NN.
+
+    Looking at the accuracy scores between training/testing sets both K-NN and decision tree show signs of overfitting as their training scores trend higher than testing scores whereas in this case SVM improves on testing scores as the training set size increases.
 
 
 Question 4 - Describing the Model in Layman's Terms
@@ -69,7 +70,9 @@ When explaining your model, if using external resources please include all citat
 
 Answer:
 
-LinearSVC attempts to classify data points by separating them by a line(or plane) that gives the best margin for error in that the separating plane is as far away as possible from the points on each side of it. Training it involves identifying which points have the most importance(or weight) defining the separating plane - which in general will be the points closest to it. Once the model is trained prediction can be quite fast as the query point is classified by plotting its position relative to the separating plane that was found in the training phase.
+LinearSVC attempts to classify data points by separating them by a line(or plane) that gives the best margin for error in that the separating plane is as far away as possible from the points on each side of it.
+
+ Training the model involves identifying which points have the most importance(or weight) in defining the separating plane - which in general will be the points closest to it. Once the model is trained prediction can be quite fast as the query point is classified by plotting its position relative to the separating plane that was found in the training phase.
 
 
 Question 5 - Final Model Evaluation
@@ -96,13 +99,13 @@ When Exploring the Data, it was shown there are thirteen available features for 
 
 Answer:
 
-Here is my order and reasoning:
+The following outlines the order I chose based on intuition:
 
-age - In general more experience and seniority will lead to more income, also more time to accumulate income earning assets.
-hours-per-week - More hours worked should lead to higher pay than less hours.
-occupation - Some occupations are more highly paid than others.
-education - Higher education level may indicate more income earning ability, depending on occupation.
-capital-gain - Capital gain may be an indicator of investment activity which could indicate income level.
+__age__ - In general more experience and seniority will lead to more income also more time to accumulate income earning assets.
+__hours-per-week__ - More hours worked should lead to higher overall pay than less hours.
+__occupation__ - Some occupations are more highly paid than others.
+__education__ - Higher education level may indicate more income earning ability, depending on occupation.
+__capital-gain__ - Capital gain may be an indicator of investment activity which could indicate income level.
 
 
 Question 7 - Extracting Feature Importance
